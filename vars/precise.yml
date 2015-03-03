@@ -1,0 +1,16 @@
+# Various vars.
+
+php_conf_path: /etc/php5/conf.d
+php_apt_packages:
+  - php5
+  - php5-xmlrpc
+  - php5-gd
+  - php5-curl
+  - php5-mysql
+  - php-soap
+  - php-apc
+
+php_module_ini_files:
+ - ansible
+ - apc
+php_xdebug_extension: /usr/lib/php5/20090626/xdebug.so

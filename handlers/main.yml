@@ -1,0 +1,12 @@
+---
+##
+# PHP handlers
+#
+
+- name: restart PHP server
+  service: "name={{ php_daemon }} state=restarted"
+  when: php_daemon != false
+
+- name: enable ansible config
+  command: php5enmod ansible
+  when: ansible_distribution_version != "12.04"

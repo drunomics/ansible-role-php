@@ -1,0 +1,7 @@
+[xhprof]
+{% if php_xhprof_enable %}
+extension = xhprof.so
+{% else %}
+;extension = xhprof.so
+{% endif %}
+xhprof.output_dir = {{ xhprof_output_dir }}
