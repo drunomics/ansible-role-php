@@ -1,8 +1,4 @@
 ---
-##
-# PHP handlers
-#
-
 - name: restart PHP server
   service: "name={{ php_daemon }} state=restarted"
   when: php_daemon != false
