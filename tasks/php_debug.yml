@@ -3,7 +3,7 @@
 # PHP Debugging tools
 #
 - name: Installing XDebug
-  apt: pkg={{ item }} state=present
+  apt: pkg={{ item }} state=present update_cache=yes cache_valid_time=86400
   with_items:
    #  - php5-dev
     - php5-xdebug
@@ -15,7 +15,7 @@
   when: php_xhprof_enable and ansible_distribution_version == "12.04"
 
 - name: Installing XHProf
-  apt: pkg={{ item }} state=present
+  apt: pkg={{ item }} state=present update_cache=yes cache_valid_time=86400
   with_items:
    # - php5-dev
     - php5-xhprof

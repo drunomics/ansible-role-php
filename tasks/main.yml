@@ -11,7 +11,7 @@
   when: php_v5.4
 
 - name: Install required packages.
-  apt: pkg={{ item }} state=present
+  apt: pkg={{ item }} state=present update_cache=yes cache_valid_time=86400
   with_items: php_apt_packages
 
 - name: Customizing php.ini settings.
