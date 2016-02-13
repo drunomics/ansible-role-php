@@ -1,0 +1,16 @@
+# The playbook requires a running container, see run-container.yml.
+---
+- hosts: all:&{{ limit_groups | default('container') }}
+  become: true
+  vars:
+    # Test with default vars.
+
+  roles:
+    - self
+
+  post_tasks:
+    - name: Assert php is installed and working
+      shell: >
+        php --version
+      tags:
+        - assert
