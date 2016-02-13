@@ -5,11 +5,34 @@
 # for restart notifications.
 php_daemon: false
 
-# General settings
-# Note PHP5.4 is incompatible with xhprof, so you cannot enable both.
-php_v5.4: false
+# PHP versions. Non-default, supported versions are commented out.
+php_version: 5.5
+#php_version: 5.6
+#php_version: 7.9
 
-# php.ini
+# Allow using different PHP version by adding in PPAs.
+# The default value varies per PHP version, see the respective vars files.
+php_ppa: false
+
+# Installed PHP packages.
+# The default value varies per PHP version, see the respective vars files.
+php_apt_packages:
+  - php5-cli
+  - php5-xmlrpc
+  - php5-gd
+  - php5-curl
+  - php5-mysql
+  - php-soap
+
+php_module_ini_files:
+ - ansible
+ - opcache
+
+################################
+# php.ini related settings below
+################################
+
+# main settings (ansible.ini)
 php_memory_limit: '512M'
 php_max_execution_time: '120'
 php_display_errors: 'On'
@@ -24,7 +47,7 @@ php_error_reporting: 'E_ALL | E_STRICT'
 php_realpath_cache_size: '768K'
 php_realpath_cache_ttl: 300
 
-# opcode
+# opcode.ini
 php_opcode_memory_consumption: '192M'
 php_opcache_enable: 1
 php_opcache_enable_cli: 0
@@ -38,11 +61,11 @@ apc_stat: '1'
 apc_rfc1867: '1'
 apc_shm_size: '{{ php_opcode_memory_consumption }}'
 
-# xhprof
+# xhprof.ini
 php_xhprof_enable: 0
 xhprof_output_dir: '/tmp'
 
-# xdebug php settings
+# xdebug.ini
 php_xdebug_enable: 1
 xdebug_remote_enable: 'On'
 xdebug_remote_connect_back: 'On'

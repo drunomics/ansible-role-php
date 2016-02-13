@@ -1,16 +1,4 @@
 # Various vars.
 
-php_conf_path: /etc/php5/mods-available/
-php_apt_packages:
-  - php5
-  - php5-xmlrpc
-  - php5-gd
-  - php5-curl
-  - php5-mysql
-  - php-soap
-
-php_v5.4: false
-php_module_ini_files:
- - ansible
- - opcache
+php_conf_path: "{{ '/etc/php5/mods-available/' if php_version < 7 else '/etc/php/mods-available' }}"
 php_xdebug_extension: xdebug.so

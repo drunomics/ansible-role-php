@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Small launcher to run tests as specified in .travis.yml.
+# Small launcher to run tests locally, as specified in .travis.yml.
 # Written by Wolfgang Ziegler // fago.
 
 import subprocess, os, sys, yaml;

@@ -1,0 +1,10 @@
+---
+php_ppa: "ppa:ondrej/php5-5.6"
+
+# Installed PHP packages, see php_apt_packages.
+php_apt_packages:
+  - php5-cli
+  - php5-xmlrpc
+  - php5-gd
+  - php5-curl
+  - php5-mysql

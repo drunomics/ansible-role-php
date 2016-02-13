@@ -1,0 +1,12 @@
+# Include for for tasks containing test assertions.
+---
+- name: Assert php is installed and working
+  shell: >
+    php --version | grep "PHP {{ php_version }}"
+  tags: assert
+- name: Assert that no webserver is installed
+  shell: >
+    netstat -tunlp | grep ":80 "
+  register: result
+  failed_when: result.rc != 1
+  tags: assert

@@ -2,16 +2,19 @@
 # PHP tasks
 #
 ---
-- name: "Add settings per ubuntu release"
-  include_vars: "{{ ansible_distribution_release }}.yml"
+- name: "Add default variables per PHP version and distribution"
+  include_vars: "{{ item }}"
+  with_items:
+    - "{{ ansible_distribution_release }}.yml"
+    - "php{{ php_version }}.yml"
 
-- name: Adding PHP5.4 PPA Repository
-  action: apt_repository repo=ppa:ondrej/php5-oldstable
+- name: Add PPA Repository
+  apt_repository: repo={{ php_ppa }}
   register: result
-  when: php_v5.4
+  when: php_ppa != false
 
 - name: Install required packages.
-  apt: pkg={{ item }} state=present update_cache=yes cache_valid_time=86400
+  apt: pkg={{ item }} state=present
   with_items: php_apt_packages
 
 - name: Customizing php.ini settings.
@@ -21,4 +24,4 @@
     - restart PHP server
     - enable ansible config
 
-- include: php_debug.yml tags=php,php_debug
+- include: php_debug.yml

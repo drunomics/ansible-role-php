@@ -1,0 +1,13 @@
+---
+php_ppa: ppa:ondrej/php
+
+php_apt_packages:
+  - php7.0-cli
+  - php7.0-xmlrpc
+  - php7.0-gd
+  - php7.0-curl
+  - php7.0-mysql
+
+# Disable unsupported debug extensions for now.
+php_xdebug_enable: false
+php_xhprof_enable: false

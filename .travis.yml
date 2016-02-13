@@ -5,7 +5,9 @@ sudo: required
 services:
   - docker
 env:
-  - playbook: test-defaults.yml
+  - playbook: test-php5.5.yml
+  - playbook: test-php5.6.yml
+  - playbook: test-php7.0.yml
 
 before_install:
   # Install Ansible.
