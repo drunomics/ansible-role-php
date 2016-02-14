@@ -3,28 +3,21 @@
 # PHP Debugging tools
 #
 - name: Installing XDebug
-  apt: pkg={{ item }} state=present update_cache=yes cache_valid_time=86400
-  with_items:
-   #  - php5-dev
-    - php5-xdebug
+  apt: pkg={{ item }} state=present
+  with_items: php_xdebug_apt_packages
   when: php_xdebug_enable
 
 - name: Adding XHProf PPA Repository
-  action: apt_repository repo=ppa:brianmercer/php5-xhprof
+  apt_repository: repo=ppa:brianmercer/php5-xhprof
   register: result
   when: php_xhprof_enable and ansible_distribution_version == "12.04"
 
 - name: Installing XHProf
   apt: pkg={{ item }} state=present update_cache=yes cache_valid_time=86400
   with_items:
-   # - php5-dev
     - php5-xhprof
     - graphviz
   when: php_xhprof_enable
-
-- name: Removing deprecated XDebug config
-  file: path=/etc/php5/conf.d/xdebug-settings.ini state=absent
-  notify: restart {{ php_daemon }}
 
 - name: Customizing php.ini settings.
   template: src={{ item }}-ini.j2 dest={{ php_conf_path }}/{{ item }}.ini mode=644
