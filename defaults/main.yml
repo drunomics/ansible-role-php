@@ -66,4 +66,4 @@ xdebug_remote_enable: 'On'
 xdebug_remote_connect_back: 'On'
 xdebug_idekey: 'phpstorm'
 xdebug_remote_host: 'localhost'
-xdebug_max_nesting_level: 200
+xdebug_max_nesting_level: 500
