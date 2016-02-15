@@ -48,6 +48,8 @@ php_opcache_enable: 1
 php_opcache_enable_cli: 0
 php_opcache_validate_timestamps: 1
 php_opcache_revalidate_freq: 2
+php_opcache_load_comments: 1
+php_opcache_save_comments: 1
 
 # apc.ini
 apc_enabled: '1'

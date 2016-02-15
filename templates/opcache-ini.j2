@@ -8,3 +8,5 @@ opcache.enable = {{ php_opcache_enable }}
 opcache.enable_cli = {{ php_opcache_enable_cli }}
 opcache.validate_timestamps {{ php_opcache_validate_timestamps }}
 opcache.revalidate_freq {{ php_opcache_revalidate_freq }}
+opcache.load_comments = {{ php_opcache_load_comments|int }}
+opcache.save_comments = {{ php_opcache_save_comments|int }}
