@@ -15,15 +15,15 @@
 
 - name: Remove obsolete packages
   apt: pkg={{ item }} state=absent
-  with_items: php_apt_packages_remove
+  with_items: "{{ php_apt_packages_remove }}"
 
 - name: Install required packages
   apt: pkg={{ item }} state=present
-  with_items: php_apt_packages
+  with_items: "{{ php_apt_packages }}"
 
 - name: Customizing php.ini settings
   template: src={{ item }}-ini.j2 dest={{ php_conf_path }}/{{ item }}.ini mode=644
-  with_items: php_module_ini_files
+  with_items: "{{ php_module_ini_files }}"
   notify:
     - restart PHP server
     - enable ansible config

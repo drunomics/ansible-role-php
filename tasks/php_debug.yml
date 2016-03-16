@@ -4,7 +4,7 @@
 #
 - name: Installing XDebug
   apt: pkg={{ item }} state=present
-  with_items: php_xdebug_apt_packages
+  with_items: "{{ php_xdebug_apt_packages }}"
   when: php_xdebug_enable
 
 - name: Adding XHProf PPA Repository

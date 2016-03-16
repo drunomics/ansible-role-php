@@ -1,4 +1,3 @@
 # Various vars.
 
-php_conf_path: "{{ '/etc/php5/mods-available/' if php_version < 7 else '/etc/php/mods-available' }}"
 php_xdebug_extension: xdebug.so

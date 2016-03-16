@@ -10,5 +10,7 @@ php_apt_packages:
   - php5-curl
   - php5-mysql
 
+php_conf_path: /etc/php5/mods-available/
+
 php_xdebug_apt_packages:
   - php5-xdebug

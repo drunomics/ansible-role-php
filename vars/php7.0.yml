@@ -9,6 +9,8 @@ php_apt_packages:
   - php7.0-curl
   - php7.0-mysql
 
+php_conf_path: /etc/php/7.0/mods-available/
+
 php_xdebug_apt_packages:
   - php-xdebug
 
