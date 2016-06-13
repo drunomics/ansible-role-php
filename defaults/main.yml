@@ -69,3 +69,6 @@ xdebug_remote_connect_back: 'On'
 xdebug_idekey: 'phpstorm'
 xdebug_remote_host: 'localhost'
 xdebug_max_nesting_level: 500
+
+# zend assertations
+php_zend_assertations: '1'
