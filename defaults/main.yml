@@ -30,6 +30,7 @@ php_module_ini_files:
 # main settings (ansible.ini)
 php_memory_limit: '512M'
 php_max_execution_time: '120'
+php_max_input_vars: '2000'
 php_display_errors: 'On'
 php_display_startup_errors: 'On'
 php_html_errors: 'On'
@@ -40,7 +41,7 @@ php_date_timezone: 'Europe/Vienna'
 php_error_reporting: 'E_ALL | E_STRICT'
 # Increased realpath cache size helps with performance on nfs
 php_realpath_cache_size: '768K'
-php_realpath_cache_ttl: 300
+php_realpath_cache_ttl: '300'
 
 # opcode.ini
 php_opcode_memory_consumption: '192M'
@@ -68,4 +69,4 @@ xdebug_remote_enable: 'On'
 xdebug_remote_connect_back: 'On'
 xdebug_idekey: 'phpstorm'
 xdebug_remote_host: 'localhost'
-xdebug_max_nesting_level: 500
+xdebug_max_nesting_level: '500'
