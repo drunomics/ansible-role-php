@@ -42,6 +42,7 @@ php_error_reporting: 'E_ALL | E_STRICT'
 # Increased realpath cache size helps with performance on nfs
 php_realpath_cache_size: '768K'
 php_realpath_cache_ttl: '300'
+php_zend_assertations: '1'
 
 # opcode.ini
 php_opcode_memory_consumption: '192M'
