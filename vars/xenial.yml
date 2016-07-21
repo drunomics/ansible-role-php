@@ -1,4 +1,4 @@
 # Various vars.
 
 php_xdebug_extension: xdebug.so
-php_opcache_priority: 05
+php_opcache_priority: 10

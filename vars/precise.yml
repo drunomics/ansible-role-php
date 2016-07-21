@@ -14,3 +14,4 @@ php_module_ini_files:
  - ansible
  - apc
 php_xdebug_extension: /usr/lib/php5/20090626/xdebug.so
+php_opcache_priority: 05
