@@ -25,3 +25,5 @@ php_apt_packages_remove:
 
 # Disable unsupported debug extensions for now.
 php_xhprof_enable: false
+
+phpenmod_bin: phpenmod

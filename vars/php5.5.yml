@@ -14,3 +14,5 @@ php_conf_path: /etc/php5/mods-available/
 
 php_xdebug_apt_packages:
   - php5-xdebug
+
+phpenmod_bin: php5enmod
