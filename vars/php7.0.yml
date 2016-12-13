@@ -27,3 +27,5 @@ php_apt_packages_remove:
 php_xhprof_enable: false
 
 phpenmod_bin: phpenmod
+
+php_alternative_path: /usr/bin/php7.0

@@ -31,4 +31,10 @@
     - restart PHP server
     - enable ansible config
 
+- name: Ensure the right PHP version is used
+  alternatives:
+    name: php
+    path: "{{ php_alternative_path }}"
+  when: php_alternative_path is defined
+
 - include: php_debug.yml
