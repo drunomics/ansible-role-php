@@ -3,29 +3,29 @@ php_ppa: ppa:ondrej/php
 
 php_apt_packages:
   - php-apcu
-  - php7.0-bcmath
-  - php7.0-cli
-  - php7.0-curl
-  - php7.0-gd
-  - php7.0-intl
-  - php7.0-mbstring
-  - php7.0-mysql
-  - php7.0-sqlite3
-  - php7.0-xml
-  - php7.0-xmlrpc
+  - php7.1-bcmath
+  - php7.1-cli
+  - php7.1-curl
+  - php7.1-gd
+  - php7.1-intl
+  - php7.1-mbstring
+  - php7.1-mysql
+  - php7.1-sqlite3
+  - php7.1-xml
+  - php7.1-xmlrpc
 
-php_conf_path: /etc/php/7.0/mods-available/
+php_conf_path: /etc/php/7.1/mods-available/
 
 php_xdebug_apt_packages:
   - php-xdebug
 
 # Remove conflicting packages that might be installed already.
 php_apt_packages_remove:
-  - php5-common
+  - php7.0-common
 
 # Disable unsupported debug extensions for now.
 php_xhprof_enable: false
 
 phpenmod_bin: phpenmod
 
-php_alternative_path: /usr/bin/php7.0
+php_alternative_path: /usr/bin/php7.1
