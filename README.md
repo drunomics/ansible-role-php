@@ -1,5 +1,6 @@
-##drunomics.php##
+# drunomics.php
 [![Build Status](https://travis-ci.org/drunomics/ansible-role-php.svg?branch=master)](https://travis-ci.org/drunomics/ansible-role-php)
+
 Ansible role that installs php. Optionally with xdebug, xhprof.
 
 Distribution: Ubuntu (tested on 14.04)
