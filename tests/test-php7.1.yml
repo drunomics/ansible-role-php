@@ -9,4 +9,4 @@
     - self
 
   post_tasks:
-    - include: assertion-tasks.yml
+    - include_tasks: assertion-tasks.yml
