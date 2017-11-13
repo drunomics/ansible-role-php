@@ -37,4 +37,4 @@
     path: "{{ php_alternative_path }}"
   when: php_alternative_path is defined
 
-- include: php_debug.yml
+- include_tasks: php_debug.yml
