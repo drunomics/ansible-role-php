@@ -1,6 +1,4 @@
 ---
-php_ppa: ppa:ondrej/php
-
 php_apt_packages:
   - php-apcu
   - php7.1-bcmath

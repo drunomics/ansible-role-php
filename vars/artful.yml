@@ -3,4 +3,4 @@
 php_xdebug_extension: xdebug.so
 php_opcache_priority: 10
 
-php_ppa: "{{ 'ppa:ondrej/php' if php_version != '7.0' else 'false' }}"
+php_ppa: "{{ 'ppa:ondrej/php' if php_version != '7.1' else 'false' }}"

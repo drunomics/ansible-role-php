@@ -1,6 +1,4 @@
 ---
-php_ppa: "ppa:ondrej/php"
-
 # Installed PHP packages, see php_apt_packages.
 php_apt_packages:
   - php5.6-apcu

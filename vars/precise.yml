@@ -15,3 +15,5 @@ php_module_ini_files:
  - apc
 php_xdebug_extension: /usr/lib/php5/20090626/xdebug.so
 php_opcache_priority: 05
+
+php_ppa: "{{ 'ppa:ondrej/php' if php_version != '5.5' else 'false' }}"
