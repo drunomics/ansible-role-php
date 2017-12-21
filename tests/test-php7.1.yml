@@ -4,6 +4,8 @@
   become: true
   vars:
     php_version: 7.1
+    php_additional_extensions:
+    - php7-ldap
 
   roles:
     - self
