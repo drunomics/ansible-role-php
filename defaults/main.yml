@@ -20,9 +20,6 @@ php_ppa: false
 php_apt_packages: []
 php_apt_packages_remove: []
 
-# Additional php extensions that will be installed.
-php_additional_extensions: []
-
 php_module_ini_files:
  - ansible
  - opcache
