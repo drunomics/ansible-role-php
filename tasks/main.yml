@@ -42,4 +42,4 @@
   with_items: "{{ php_additional_extensions }}"
   when: php_additional_extensions is defined
 
-- include_tasks: php_debug.yml
+- include: php_debug.yml
