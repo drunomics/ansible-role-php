@@ -38,7 +38,7 @@
   when: php_alternative_path is defined
 
 - name: Install additional php-extensions
-  apt: pkg={{ item }} state=present
+  apt: pkg={{ item.package }} state=present
   with_items: "{{ php_additional_extensions }}"
   when: php_additional_extensions is defined
 

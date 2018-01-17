@@ -10,3 +10,8 @@
   register: result
   failed_when: result.rc != 1
   tags: assert
+- name: Assert that php extensions were installed
+  shell: >
+    php -m | grep {{ item.name }}
+  tags: assert
+  with_items: "{{ php_additional_extensions }}"
