@@ -14,4 +14,4 @@
   shell: >
     php -m | grep {{ item.name }}
   tags: assert
-  with_items: "{{ php_additional_extensions }}"
+  with_items: "{{ php_additional_extensions | default([]) }}"
