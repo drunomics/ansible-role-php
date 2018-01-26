@@ -4,6 +4,8 @@
   become: true
   vars:
     php_version: 5.5
+    php_additional_extensions:
+    - { package: 'php5-ldap', name: 'ldap' }
 
   roles:
     - self

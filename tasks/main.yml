@@ -37,4 +37,9 @@
     path: "{{ php_alternative_path }}"
   when: php_alternative_path is defined
 
+- name: Install additional php-extensions
+  apt: pkg={{ item.package }} state=present
+  with_items: "{{ php_additional_extensions }}"
+  when: php_additional_extensions is defined
+
 - include: php_debug.yml
