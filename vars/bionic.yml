@@ -1,0 +1,8 @@
+# Various vars.
+
+php_xdebug_extension: xdebug.so
+php_opcache_priority: 10
+
+php_ppa: false
+# todo: Should be:
+# php_ppa: "{{ 'false' if php_version == '7.2' else 'ppa:ondrej/php' }}"
