@@ -21,6 +21,7 @@ php_xdebug_apt_packages:
 php_apt_packages_remove:
   - php5-common
   - php7.1-common
+  - php7.2-common
 
 # Disable unsupported debug extensions for now.
 php_xhprof_enable: false
