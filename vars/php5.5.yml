@@ -15,4 +15,10 @@ php_conf_path: /etc/php5/mods-available/
 php_xdebug_apt_packages:
   - php5-xdebug
 
+# Remove conflicting packages that might be installed already.
+php_apt_packages_remove:
+  - php5.6-common
+  - php7.1-common
+  - php7.2-common
+
 phpenmod_bin: php5enmod
