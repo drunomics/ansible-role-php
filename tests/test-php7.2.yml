@@ -5,7 +5,7 @@
   vars:
     php_version: 7.2
     php_additional_extensions:
-    - { package: 'php7.1-ldap', name: 'ldap' }
+    - { package: 'php7.2-ldap', name: 'ldap' }
 
   roles:
     - self
