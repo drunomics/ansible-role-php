@@ -11,6 +11,7 @@ Supported PHP versions:
 - PHP 5.6
 - PHP 7.0
 - PHP 7.1
+- PHP 7.2
 
 ## Requirements
 None.
@@ -22,13 +23,14 @@ None.
 The PHP version may be configured via the `php_version` variable; e.g.:
 
 ```
-php_version: 5.5
+#php_version: 5.5
 #php_version: 5.6
 #php_version: 7.0
-#php_version: 7.1
+php_version: 7.1
+#php_version: 7.2
 ```
 
 For further variables, please check the documented variables defaults/main.yml.
 
 
-(c) 2017 drunomics GmbH. /  MIT License
+(c) 2018 drunomics GmbH. /  MIT License
