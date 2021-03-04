@@ -1,0 +1,33 @@
+---
+php_apt_packages:
+  - php-apcu
+  - php7.4-bcmath
+  - php7.4-cli
+  - php7.4-curl
+  - php7.4-gd
+  - php7.4-intl
+  - php7.4-mbstring
+  - php7.4-mysql
+  - php7.4-sqlite3
+  - php7.4-xml
+  - php7.4-xmlrpc
+
+php_conf_path: /etc/php/7.4/mods-available/
+
+php_xdebug_apt_packages:
+  - php-xdebug
+
+# Remove conflicting packages that might be installed already.
+php_apt_packages_remove:
+  - php5-common
+  - php5.6-common
+  - php7.0-common
+  - php7.1-common
+  - php7.2-common
+
+# Disable unsupported debug extensions for now.
+php_xhprof_enable: false
+
+phpenmod_bin: phpenmod
+
+php_alternative_path: /usr/bin/php7.4
